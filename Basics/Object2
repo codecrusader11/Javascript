@@ -1,0 +1,2 @@
+//Singleton
+const User=new Object();
