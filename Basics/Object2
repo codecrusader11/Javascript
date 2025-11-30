@@ -1,2 +1,22 @@
 //Singleton
 const User=new Object();
+User.id="123abc"
+User.name="lily"
+
+// console.log(User);
+// console.log(typeof User.id)
+
+const student={
+    name:{fullname:{
+        firstname:"cutie",
+        lastname:"patootie"
+    }}
+}
+
+console.log(student.name.fullname)
+
+const Obj1={0:"a",1:"b"}
+const Obj2={2:"c",3:"d"}
+
+const Obj3=Object.assign({},Obj1,Obj2)
+console.log(Obj3)
