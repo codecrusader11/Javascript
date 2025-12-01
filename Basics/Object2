@@ -13,10 +13,28 @@ const student={
     }}
 }
 
-console.log(student.name.fullname)
+//console.log(student.name.fullname)
 
 const Obj1={0:"a",1:"b"}
 const Obj2={2:"c",3:"d"}
 
 const Obj3=Object.assign({},Obj1,Obj2)
-console.log(Obj3)
+//console.log(Obj3)
+
+// console.log(Object.keys(student))
+// console.log(Object.values(student))
+// console.log(Object.entries(student))
+// console.log(student.hasOwnProperty('name'))
+
+//DESTRUCTURING AN OBJECT
+
+const newObj={
+    name:"tata",
+    address:"sector-7",
+    email:"abc@gmail.com"
+}
+const {address}=newObj;
+console.log(address)
+
+const {email:contact}=newObj;//can even change the name of the property and writing 'email' won't work
+console.log(contact)
