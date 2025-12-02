@@ -1,0 +1,24 @@
+// function sum(a,b){
+//     return a+b;
+// }
+//make sure to store the returned value in a variable or print using console otherwise no output would be shown
+// let result=sum(3,4)
+// console.log(sum(2,6))-->//also works
+// console.log(result)
+
+//REST OPERATOR:
+/*function values(v1,v2,...nums){
+console.log(nums)
+}
+values(200,50,400,1000)
+*/
+
+//GLOBAL AND LOCAL SCOPE:
+let a=20;
+
+if(true){
+    a=40;
+    console.log("inner scope",a);
+}
+
+console.log("outer scope",a);
