@@ -1,0 +1,62 @@
+//>, <, <=, >=, ==, !=, ===, !==
+
+const userEmail='abc'
+if(userEmail){
+    //console.log("email accessed")
+}//truthy-falsey
+//else console.log("email not accessed")
+
+//SCOPE:(if-else)
+// const score=200;
+// if(score>100){
+//     const power='fly'
+//     console.log(`User power:${power}`);
+// }
+// console.log(`User power:${power}`);
+
+//Switch
+// let key=1;
+// switch(key){
+// case 1:
+//     console.log("case1");
+//     break;
+// case 2:
+//     console.log("case2");
+//     break;
+// case 3:
+//     console.log("case3");
+//     break;
+// default:
+//     console.log("default");
+//     break;
+// }
+
+//TRUTHY-FALSEY
+//falsy values: false,0,-0,BigInt 0n, "",null,undefined,NaN
+//truthy values: except falsy values, "0", 'false', " ", [], {}, function(){}(empty func)
+
+/*how to check for [] and {} when they give true for if-else*/
+//[]-->represents array and {}-->represents object
+const email=[]
+if(email.length === 0){
+    console.log("Array empty")
+}
+else console.log("non empty")
+
+const Obj={}
+if(Object.keys(Obj).length===0){
+    console.log("object is empty")
+}
+
+//false == 0 == ''
+
+//Nullish Coalescing Operator (??): null undefined
+/*when we want a data from database or browser but we get null or undefined for the call which may disrupt code
+to prevent this, ?? is used */
+let val1;
+//vla1=5??10;//will take the first value i.e.5
+val1= null ?? 10;//checks the safety 10 is safer
+console.log(val1)
+
+let val2=null ?? 5 ?? 10;//second value would be taken
+console.log(val2)

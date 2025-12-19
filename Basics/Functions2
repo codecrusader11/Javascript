@@ -1,0 +1,67 @@
+//console.log(addOne(4))
+
+function addOne(num){
+    return num+1;
+}
+
+
+const addTwo=function(num){
+    return num+2;
+}
+//console.log(addTwo(5))
+
+
+const User={
+    username:"abc",
+    greeting:function (){
+        console.log(`Hi,${this.username}`)
+    }
+}
+
+// console.log(User);
+// User.username="shrimp"
+// console.log(User)
+// console.log(this)
+
+function test(){
+    let username="abc"
+    console.log(this)
+    console.log(this.username)//undefined. so context matters!
+    console.log(username)
+}
+//test()
+
+//ARROW FUNCTIONS:
+const web=()=>{
+    let name="shiny"
+    console.log(this)
+    console.log(this.name)
+}
+//web()
+
+//EXPLICIT RETURN:
+const Sum = (num1, num2) => {
+    return num1 + num2  // if using '{}', definitely need to use 'return'
+}
+//console.log(Sum(2,3))
+
+//IMPLICIT RETURN:
+//no need for 'return'
+const Mul = (num1,num2) => num1*num2    //for single line, this way can be used to return the values. "()" may or may not be used.
+//console.log(Mul(3,4)) 
+
+let obj=()=>({user:"kitty"})
+//console.log(obj)
+
+//IIFE:
+(function tea(){
+    console.log('Connected')
+})();
+
+(() => {
+    console.log('arrow IIFE')
+})();
+
+!function coffee(){//forces JS to treat it as an expression rather than declaration. '+','-','~'can also be used 
+    console.log('third way for IIFE')
+}();
