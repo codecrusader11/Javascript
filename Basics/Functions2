@@ -54,7 +54,7 @@ let obj=()=>({user:"kitty"})
 //console.log(obj)
 
 //IIFE:
-(function tea(){
+;(function tea(){
     console.log('Connected')
 })();
 

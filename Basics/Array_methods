@@ -1,0 +1,66 @@
+//forEach (doesn't return a value)
+const food=['tomato','potato','mango','spinach']
+
+/*
+food.forEach(item => {
+    console.log(item)
+});
+
+food.forEach((item) => {
+    console.log(item)
+});
+
+food.forEach(function (item) {
+    console.log(item)
+});
+
+function printAll(val){console.log(val)}
+food.forEach(printAll)
+*/
+
+//Array.for"Each((item,index,arr)=>...code here)
+
+/*const coding=[
+    {
+        language: "java",
+        extension:"java"
+    },
+    {
+        language: "python",
+        extension:"py"
+    },
+    {
+        language: "javascript",
+        extension:"js"
+    }
+]
+coding.forEach(item => {
+    console.log(item.language)
+})*/
+
+//FILTER:
+const myNums=[1,2,3,4,5,6,7]
+
+/*
+let newNums = myNums.filter((val) => {return val>4;})//scope has started by {} then have to use return
+console.log(newNums)
+//same thing can be done as:
+
+let anotherNums=[]
+myNums.forEach((num)=>{
+    if(num>4) anotherNums.push(num)
+})
+console.log(anotherNums)
+*/
+
+//MAP:
+const nums=myNums.map((num)=>{return num+10})
+console.log(nums,myNums)
+
+//CHAINING:(the result of the previous will be passed as argument to the next)
+const chain=myNums.map((val)=>val*2).map((val)=>val+1).filter((val)=>val>10)
+console.log(chain)
+
+//REDUCE:
+const sum=myNums.reduce((accumulator,currentVal)=> accumulator+currentVal,0)//initializes accumulator's value to 0; also works is not used 
+console.log(sum)

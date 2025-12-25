@@ -22,3 +22,20 @@ if(true){
 }
 
 console.log("outer scope",a);
+
+//DOM (when we want to add a language inside a 'ul')
+
+function addLanguage(language){
+    const li=document.createElement('li');
+    li.innerHTML=`${language}`;
+    document.querySelector('.language').appendChild(li)
+}
+addLanguage("python")
+addLanguage("typescript")
+//Optimized approach:
+function addOptiLanguage(language){
+    const li=document.createElement('li')
+    li.appendChild(document.createTextNode(language))
+    document.querySelector('.language').appendChild(li)
+}
+addOptiLanguage('golang')
